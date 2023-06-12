@@ -1,10 +1,11 @@
 import Header from '@/components/Header';
+import SideNav from '@/components/SideNav';
 import React from 'react'
 
 const Documents = () => {
   return (
     <div>
-      <Header />
+      <SideNav />
     </div>
   )
 }
