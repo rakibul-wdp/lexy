@@ -1,8 +1,11 @@
+import Header from '@/components/Header';
 import React from 'react'
 
 const Documents = () => {
   return (
-    <div>page</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 
