@@ -3,7 +3,7 @@ import { HiPencil } from "react-icons/hi";
 
 const InnerContent = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between mt-32 md:mt-36 mb-10 mx-10 h-screen">
+    <div className="flex flex-col md:flex-row justify-between mt-32 md:mt-36 mb-10 ml-10 lg:ml-28 mr-10 h-screen">
       <div className="bg-secondary p-5 pt-10 rounded-lg md:mr-5 mb-10 md:mb-0">
         <input
           type="text"

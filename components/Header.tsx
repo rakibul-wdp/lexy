@@ -3,13 +3,18 @@ import Avatar from "@/public/assets/images/avatar.svg";
 import Logo from "@/public/assets/images/Logo.svg";
 import Image from "next/image";
 
-const Header = ({isChecked}: any) => {
+const Header = ({ isChecked }: any) => {
   return (
     <div className="navbar p-0 bg-secondary fixed">
       <div className="navbar-start">
+        {!isChecked && (
+          <a className="btn btn-ghost normal-case text-xl -mt-[2.0637rem] lg:hidden px-0">
+            <Image src={Logo} width={80} height={80} alt="lexy" />
+          </a>
+        )}
         <label
           htmlFor="my-drawer-2"
-          className="btn btn-circle swap swap-rotate lg:hidden ml-2"
+          className="btn btn-circle swap swap-rotate lg:ml-24 ml-2"
         >
           <input type="checkbox" />
           <svg
@@ -31,15 +36,12 @@ const Header = ({isChecked}: any) => {
             <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
           </svg>
         </label>
-        {!isChecked && <a className="btn btn-ghost normal-case text-xl -mt-[2.0635rem] lg:hidden">
-          <Image src={Logo} width={80} height={80} alt="lexy" />
-        </a>}
       </div>
       <div className="navbar-end">
         <a className="btn btn-primary capitalize text-secondary px-7">
           Create Doc
         </a>
-        <div className="avatar ml-8 md:ml-16 pr-5 lg:pr-28">
+        <div className="avatar ml-8 md:ml-16 pr-5 lg:pr-8">
           <div className="w-20 rounded-full">
             <Image
               className="p-2"
