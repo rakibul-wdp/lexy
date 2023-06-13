@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import Avatar from "@/public/assets/images/avatar.svg";
 import Logo from "@/public/assets/images/Logo.svg";
 import Image from "next/image";
-import SideNav from "./SideNav";
 
 const Header = ({isChecked}: any) => {
   return (
-    <div className="navbar p-0 bg-secondary sticky">
+    <div className="navbar p-0 bg-secondary fixed">
       <div className="navbar-start">
         <label
           htmlFor="my-drawer-2"
@@ -40,7 +39,7 @@ const Header = ({isChecked}: any) => {
         <a className="btn btn-primary capitalize text-secondary px-7">
           Create Doc
         </a>
-        <div className="avatar ml-8 md:ml-16 pr-10">
+        <div className="avatar ml-8 md:ml-16 pr-5 lg:pr-28">
           <div className="w-20 rounded-full">
             <Image
               className="p-2"
