@@ -6,7 +6,7 @@ import SideNav from "./SideNav";
 
 const Header = ({isChecked}: any) => {
   return (
-    <div className="navbar p-0 bg-secondary">
+    <div className="navbar p-0 bg-secondary sticky">
       <div className="navbar-start">
         <label
           htmlFor="my-drawer-2"
