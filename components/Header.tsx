@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@/public/assets/images/avatar.svg";
 import Logo from "@/public/assets/images/Logo.svg";
 import Image from "next/image";

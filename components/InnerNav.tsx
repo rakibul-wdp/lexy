@@ -7,7 +7,7 @@ import { FaRobot } from "react-icons/fa";
 import { MdHelp } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 
-const InnerNav = () => {
+const InnerNav = ({ isChecked, setIsChecked }: any) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -16,7 +16,10 @@ const InnerNav = () => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+    setIsChecked(false);
   };
+
+  if (isChecked === true && isHovered === false) setIsHovered(true);
 
   return (
     <div className="drawer-side">
@@ -32,9 +35,7 @@ const InnerNav = () => {
           <li className="flex items-center">
             <a className="tooltip tooltip-right p-0" data-tip="lexy">
               {isHovered ? (
-                <h2 className="text-3xl text-secondary font-bold pt-5">
-                  Lexy
-                </h2>
+                <h2 className="text-3xl text-secondary font-bold pt-5">Lexy</h2>
               ) : (
                 <Image src={Logo} width={80} height={80} alt="lexy" />
               )}
